@@ -1,6 +1,6 @@
 **Imagens de alunos**
 
-Nesse diretório devem ser inseridos as imagens dos alunos para reconhcimento.
+Nesse diretório devem ser inseridos as imagens dos alunos para reconhecimento.
 
 As fotos devem seguir as seguintes regras:
 
