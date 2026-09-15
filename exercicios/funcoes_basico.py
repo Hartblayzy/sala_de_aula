@@ -3,14 +3,11 @@
 def formatar_saudacao(nome: str, cidade: str):
     return f"Olá {nome}, seja bem vinda a {cidade}!"
 
-
-        
-
 #--------------------------------------Exercício 2 -----------------------------------
+
 def calcular_perimetro(largura: float, altura: float):
       perimetro = 2 * (largura + altura)
       return perimetro
-
 
 #--------------------------------------Exercício 3 -----------------------------------
 
@@ -26,35 +23,40 @@ def calcular_gorjeta_por_pessoa (conta: float, porcentagem_gorjeta: float, pesso
       return  gorjeta_individual
 
 #--------------------------------------Exercício 5 -----------------------------------
+
 def resumo_circulo (raio: float):
       area = 3.14 * (raio ** 2)
       return area
 
 #--------------------------------------Exercício 6 -----------------------------------
+
 def resumo_juros_compostos (capital: float, taxa: float, anos: int):
        montante = capital * (1 + taxa / 100) ** anos
        return montante
 
 #--------------------------------------Exercício 7 -----------------------------------
+
 def metricas_cilindro (raio: float, altura: float):
       volume = 3.14 * (raio ** 2) * altura
       area_superficie = 2 * 3.14 * (raio ** 2) + 2 * 3.14 * raio * altura
       return volume, area_superficie
 
 #--------------------------------------Exercício 7 -----------------------------------
+
 def gerar_item_fatura (nome_item: str, preco: float, porcentagem_desconto: float):
       preco_final = (preco * porcentagem_desconto) / 100
       return preco_final
 
 
 
-
 if __name__ == '__main__':
+
       print("=" * 50)
       print("            EXERCÍCIOS DE PYTHON")
       print("=" * 50)
 
 #RESULTADO 1
+
       print("\n[ Exercício 1 ]")
       print("-" * 50)
 
@@ -64,6 +66,7 @@ if __name__ == '__main__':
 
 
 #RESULTADO 2
+
       print("\n[ Exercício 2 ]")
       print("-" * 50)
 
@@ -72,6 +75,7 @@ if __name__ == '__main__':
       print (f"O preímetro é: {perimetro}")
 
 #RESULTADO 3
+
       print("\n[ Exercício 3 ]")
       print("-" * 50)
 
@@ -79,6 +83,7 @@ if __name__ == '__main__':
       print (f"A temperatura é: {temp_celsius}°C")
 
 #RESULTADO 4
+
       print("\n[ Exercício 4 ]")
       print("-" * 50)
 
