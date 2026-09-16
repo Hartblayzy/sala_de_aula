@@ -41,11 +41,31 @@ def metricas_cilindro (raio: float, altura: float):
       area_superficie = 2 * 3.14 * (raio ** 2) + 2 * 3.14 * raio * altura
       return volume, area_superficie
 
-#--------------------------------------Exercício 7 -----------------------------------
+#--------------------------------------Exercício 8 -----------------------------------
 
-def gerar_item_fatura (nome_item: str, preco: float, porcentagem_desconto: float):
+def gerar_item_fatura(nome_item: str, preco: float, porcentagem_desconto: float):
       preco_final = (preco * porcentagem_desconto) / 100
-      return preco_final
+      valor_desconto = preco - preco_final
+      
+      return valor_desconto, nome_item, preco_final
+
+#--------------------------------------Exercício 9 -----------------------------------
+
+def resumo_emprestimo(capital: float, taxa_anual: float, anos: int):
+      #A taxa precisa estar em meses, logo 
+      meses = anos * 12
+      taxa_por = taxa_anual / 100
+      taxa_mensal = ((1 + taxa_por) ** (1/12)) - 1
+
+
+
+      pmt = capital * (taxa_mensal *(1 + taxa_mensal) ** meses) / ((1 + taxa_mensal) ** meses -1)
+
+      
+      total_pago = pmt * meses
+      return pmt, total_pago
+
+
 
 
 
@@ -112,7 +132,7 @@ if __name__ == '__main__':
       print("\n[ Exercício 7 ]")
       print("-" * 50)     
 
-      volume, area_superficie = metricas_cilindro (altura=5.0, raio=2.0)
+      volume, area_superficie = metricas_cilindro(altura=5.0, raio=2.0)
       print (f"Volume do Cilindro: {volume:.2f} | Área de superfície: {area_superficie:.2f}")
 
 #RESULTADO 8
@@ -120,6 +140,13 @@ if __name__ == '__main__':
       print("\n[ Exercício 8 ]")
       print("-" * 50)  
 
+      fatura, nome_item, economia = gerar_item_fatura(nome_item="Teclado", porcentagem_desconto= 15.0, preco= 80.0 )
+      print (f"Item: {nome_item} | Preço final: R${fatura} (Você economizou R$ {economia})")
+      
+#RESULTADO 9
 
+      print("\n[ Exercício 9 ]")
+      print("-" * 50)  
 
-
+      emprestimo, parcela_mensal, total_pago = resumo_emprestimo(capital= 10000.0, anos=3, taxa_anual=6.0)
+      print(f"Emprestimo: R$ {emprestimo} | Parcela Mensal: R$ {parcela_mensal} | Total Pago: R$ {total_pago}")
