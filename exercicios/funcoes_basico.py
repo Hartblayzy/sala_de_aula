@@ -64,8 +64,8 @@ def resumo_emprestimo(capital: float, taxa_anual: float, anos: int):
 #--------------------------------------Exercício 10 -----------------------------------
 
 def calcular_distancia (x1: int, y1: int, x2: int, y2: int):
-      distancia = ((x2 - x1) ** 2) + ((y2 - y1) ** 2)
-      raiz = distancia ** (1/2)
+      distancia = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** (1/2)
+      
 
       return distancia
 
