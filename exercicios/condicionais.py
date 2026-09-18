@@ -60,7 +60,7 @@ def calcular_desconto(valor_compra: float, e_cliente_vip: bool):
     desconto_maior = (valor_compra * 15) / 100
     desconto_menor = (valor_compra * 5) / 100
 
-    if valor_compra > 200 or e_cliente_vip == True:
+    if valor_compra > 200 or e_cliente_vip:
         return valor_compra - desconto_maior
     
     return valor_compra - desconto_menor
@@ -112,6 +112,20 @@ def e_bissexto (ano: int):
         return True
     return False
 
+def avaliar_estudante (p1: float, p2: float, freq: float, trabalho: bool):
+    media = (p1 + p2) / 2
+    if freq < 75:
+        return 'Reprovado por Frequência'
+    if freq >= 75:
+        if media >= 7.0:
+            return 'Aprovado direto'
+        if media >= 5 and media <= 6.9 and trabalho==True:
+            nova_media = media + 1
+            if nova_media >= 7:
+                return 'Aprovado com Trabalho Extra'
+            elif nova_media >= 5 and nova_media <= 6.9:
+                return 'Exame Final'    
+        return 'Reprovado por nota'
 
 
 if __name__ == '__main__':        
@@ -178,3 +192,7 @@ if __name__ == '__main__':
 
     ano = e_bissexto (2000)
     print (ano)
+
+
+    nota_aluno = avaliar_estudante (6.0, 6.5, 80, False)
+    print(nota_aluno)
