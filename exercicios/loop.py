@@ -86,8 +86,57 @@ def separar_pares_impares(numeros:list):
     
     return f'Pares: {pares} | Ímpares: {impares}'
 
+#--------------------------------------Exercício 9 -----------------------------------
+
+def encontrar_extremos(numeros: list):
+    lista = numeros.copy()
+    list_sort = lista.sort()
+
+    menor_maior = lista[0] , lista [-1]
+    return menor_maior
+
+#--------------------------------------Exercício 10 -----------------------------------
+    
+def simular_saque(saldo_inicial: float, saques: list):
+    i = 0
+    while i < len(saques):
+        if saldo_inicial >= saques[i]:
+            saldo_inicial-= saques[i]
+        i+= 1
+    return saldo_inicial
+
+#--------------------------------------Exercício 11 -----------------------------------
+
+def remover_duplicados (lista: list):
+    lista_sem_duplos = []
+    for num in lista:
+        if num not in lista_sem_duplos:
+            lista_sem_duplos.append(num)
+    
+    return lista_sem_duplos
+
+#--------------------------------------Exercício 12 -----------------------------------
+
+def calcular_media_positivos(numeros: list):
+    positivos = []
+    nota = 0
+    for num in numeros:
+        if num > 0:
+            positivos.append()                      #tem que terminar
+            for num in positivos:
+                nota += num / len(positivos)
+            
+        return nota
+
+    return 0
+            
 
 
+
+
+
+
+ 
 
 
 
@@ -146,3 +195,27 @@ if __name__ == '__main__':
 
     separar_par_impar = separar_pares_impares ([1, 2, 3, 4, 5])
     print (separar_par_impar)
+
+    print("\n[ Exercício 9 ]")
+    print("-" * 50)
+
+    lista_maior_menor = encontrar_extremos([14, 2, 35, -4, 20])
+    print (lista_maior_menor)
+
+    print("\n[ Exercício 10 ]")
+    print("-" * 50)
+
+    saldo = simular_saque (200, [50, 100, 80, 30])
+    print (saldo)
+
+    print("\n[ Exercício 11 ]")
+    print("-" * 50)
+
+    sem_duplos = remover_duplicados ([1, 3, 2, 3, 1, 4, 2])
+    print (sem_duplos)
+
+    print("\n[ Exercício 12 ]")
+    print("-" * 50)
+
+    media_positivos = calcular_media_positivos([-5, 10, -2, 20, 30])
+    print (media_positivos)
