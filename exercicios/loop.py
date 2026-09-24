@@ -119,16 +119,19 @@ def remover_duplicados (lista: list):
 
 def calcular_media_positivos(numeros: list):
     positivos = []
-    nota = 0
+    valor = 0
+    divisor = 0
+    if not  numeros:
+        return 0
     for num in numeros:
         if num > 0:
-            positivos.append()                      #tem que terminar
-            for num in positivos:
-                nota += num / len(positivos)
-            
-        return nota
+            positivos.append(num)
+            valor += num
+            divisor += 1      
+    return valor / divisor
 
-    return 0
+    
+    
             
 
 
