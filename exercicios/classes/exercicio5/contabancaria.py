@@ -14,10 +14,10 @@ class ContaBancaria:
 saldo = ContaBancaria(saldo=0, titular='Arthur')
 
 
-print(saldo.depositar_valor())
-print(saldo.depositar_valor())
-print(saldo.depositar_valor())
-print(saldo.depositar_valor())
-print(saldo.depositar_valor())
+print(saldo.depositar_valor(20))
+print(saldo.depositar_valor(20))
+print(saldo.depositar_valor(20))
+print(saldo.depositar_valor(20))
+print(saldo.depositar_valor(20))
 
 

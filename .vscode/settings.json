@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./exercicios/heranca_e_polimorfismo/exercicio1"
+    ]
+}
